@@ -1,18 +1,17 @@
 public class Triangle {
 
-     private Point a;
-     private Point b;
-     private Point c;
+     private Point onePoint;
+     private Point twoPoint;
+     private Point threePoint;
 
-    public Triangle(Point a, Point b, Point c){
-        this.a=a;
-        this.b=b;
-        this.c=c;
+    public Triangle(Point onePoint, Point twoPoint, Point threePoint){
+        this.onePoint =onePoint;
+        this.twoPoint =twoPoint;
+        this.threePoint = threePoint;
     }
 
     public boolean isRectangular(Triangle triangle){
-
-
-        return false;
+        boolean flag=false;
+        return flag;
     }
 }
