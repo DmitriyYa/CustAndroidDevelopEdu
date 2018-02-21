@@ -22,14 +22,14 @@ public class TestIsRectangular {
 
     @Test
     public void isRectangularFalse(){
-        a = new Point(2, 1);
+        a = new Point(-2, 1);
         b = new Point(4, 1);
         c = new Point(3, 4);
         triangle = new Triangle(a, b, c);
         assertFalse(triangle.isRectangular());
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void allPointsInOneLine() {
         a = new Point(2, 1);
         b = new Point(2, 3);
@@ -38,7 +38,7 @@ public class TestIsRectangular {
         triangle.isRectangular();
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void somePointsEqualce() {
         a = new Point(2, 1);
         b = new Point(2, 1);
