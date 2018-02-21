@@ -28,9 +28,9 @@ public class Triangle {
      */
     public boolean isRectangular() {
         boolean flag = false;
-        final double a = new LineSegment(this.onePoint,this.twoPoint).getLongLineSigment();
-        final double b = new LineSegment(this.twoPoint,this.threePoint).getLongLineSigment();
-        final double c = new LineSegment(this.threePoint,this.onePoint).getLongLineSigment();
+        final double a = onePoint.getDistanceToPoint(twoPoint);
+        final double b = twoPoint.getDistanceToPoint(threePoint);
+        final double c = threePoint.getDistanceToPoint(onePoint);
         final double[] array = sortAscending(a, b, c);
         if (Math.round(Math.pow(array[2], 2)) == Math.round(Math.pow(array[1], 2) + Math.pow(array[0], 2))) {
             flag = true;
